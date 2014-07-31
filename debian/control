@@ -4,14 +4,16 @@ Priority: optional
 Maintainer: Elmar S. Heeb <elmar@heebs.ch>
 Build-Depends: debhelper (>= 9)
 Standards-Version: 3.9.5
-#Vcs-Git: 
-#Vcs-Browser: 
 
 Package: dh-dist-zilla
 Architecture: all
 Multi-Arch: foreign
-Depends: ${perl:Depends}, ${misc:Depends}, debhelper, libdist-zilla-perl
-Enhances: debhelper, libdist-zilla-perl
+Depends: debhelper,
+         libdist-zilla-perl,
+         ${misc:Depends},
+         ${perl:Depends}
+Enhances: debhelper,
+          libdist-zilla-perl
 Description: debhelper add-on to call dzil build and clean up after the build
  dh-dist-zilla provides a debhelper sequence addon named 'dist_zilla'.
  .
