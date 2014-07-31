@@ -10,6 +10,7 @@ Package: dh-dist-zilla
 Architecture: all
 Multi-Arch: foreign
 Depends: debhelper,
+         libconfig-ini-perl,
          libdist-zilla-perl,
          ${misc:Depends},
          ${perl:Depends}
