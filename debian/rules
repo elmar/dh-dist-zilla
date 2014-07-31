@@ -1,0 +1,9 @@
+#!/usr/bin/make -f
+version := $(shell dpkg-parsechangelog | sed -nr 's/^Version: (.*)/\1/p')
+pod2man := pod2man -r "dh-dist-zilla v$(version)" -c dh-dist-zilla
+
+%:
+	dh $@
+
+override_dh_auto_build:
+	$(pod2man) --section=7 dh-dist-zilla.pod dh-dist-zilla.7

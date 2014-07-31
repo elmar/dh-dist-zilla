@@ -1,0 +1,24 @@
+=head1 NAME
+
+dh-dist-zilla - debhelper add-on to run dzil (Dist::Zilla) during build
+
+=head1 DESCRIPTION
+
+The dh-dist-zilla package provides a sequence addon for debhelper 7 which
+can be used in the following way:
+
+    #!/usr/bin/make -f
+    %:
+        dh $@ --with dist-zilla
+
+This will call C<dzil build> prior to C<dh_auto_configure>, C<dzil clean>
+before C<dh_clean> and will add the option C<-D I<build-directory>> to
+C<dh_auto_build>, C<dh_auto_install>, and C<dh_auto_test>.
+
+=head1 SEE ALSO
+
+L<debhelper(7)>, L<dh(1)>
+
+=head1 AUTHOR
+
+Elmar Heeb <elmar@heebs.ch> and Axel Beckert <abe@debian.org>
