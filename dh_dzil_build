@@ -1,0 +1,21 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+use Debian::Debhelper::Dh_Lib;
+init();
+
+doit(qw(dzil build));
+
+=head1 NAME
+
+dh_dzil_build - debhelper add-on to run "dzil build"
+
+=head1 SEE ALSO
+
+L<debhelper(7)>, L<dh-dist-zilla(7)>
+
+=head1 AUTHOR
+
+Elmar Heeb <elmar@heebs.ch> and Axel Beckert <abe@debian.org>
