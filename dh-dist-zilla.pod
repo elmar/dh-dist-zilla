@@ -8,6 +8,7 @@ The dh-dist-zilla package provides a sequence addon for debhelper 7 which
 can be used in the following way:
 
     #!/usr/bin/make -f
+    export DH_VERBOSE=1
     %:
         dh $@ --with dist-zilla
 
