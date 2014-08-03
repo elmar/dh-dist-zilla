@@ -14,7 +14,8 @@ can be used in the following way:
 
 This will call C<dzil build> prior to C<dh_auto_configure>, C<dzil clean>
 before C<dh_clean> and will add the option C<-D I<build-directory>> to
-C<dh_auto_build>, C<dh_auto_install>, and C<dh_auto_test>.
+C<dh_auto_configure>, C<dh_auto_build>, C<dh_auto_install>, and
+C<dh_auto_test>.
 
 =head1 SEE ALSO
 
