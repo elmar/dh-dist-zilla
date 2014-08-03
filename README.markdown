@@ -13,5 +13,5 @@ generating the CPAN package manually first.  It is analogous to using
 The `orig.tar.gz` file must only contain the `dist.ini` and source
 files but not the generated files like `META.yaml`, `README`, etc.
 
-See the [dh-dist-zilla.pod](dh-dist-zilla.pod) for details on how to
+See [dh-dist-zilla.pod](dh-dist-zilla.pod) for details on how to
 use it.
