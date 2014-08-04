@@ -6,7 +6,7 @@ The Debian package dh-dist-zilla provides a
 'dist_zilla'.
 
 The intention is to be able to build Debian packages (`.deb` files)
-directly from a [Dist::Zilla](http://dzil.org/) based Perl package
+directly from a [`Dist::Zilla`](http://dzil.org/) based Perl package
 without generating the CPAN package manually first.  It is analogous
 to using `autoreconf` to generate the `configure` script.
 
@@ -19,7 +19,7 @@ it.
 Background
 ----------
 
-The Perl community and [CPAN](http://www.cpan.org) in particular use
+The Perl community and [CPAN](http://www.cpan.org/) in particular use
 a few tools to build Perl packages.  The classic approach is to
 write a `Makefile.PL` script using
 [`ExtUtils::MakeMaker`](http://perldoc.perl.org/ExtUtils/MakeMaker.html).
@@ -36,7 +36,7 @@ is such a code generator that is very commonly used.  It helps a lot
 getting started.  However, maintenance still needs to make sure that
 information like version numbers or documentation is kept consistent.
 
-Enter [`Dist::Zilla`](http://dzil.org).  The basic promise of
+Enter [`Dist::Zilla`](http://dzil.org/).  The basic promise of
 `Dist::Zilla`, also known by its command line program `dzil`, is to
 keep all relevant information exactly once in a place where the
 particular piece of information fits best.  Given the appropriate
@@ -71,11 +71,11 @@ incorporating all improvements and bug fixes that went into
 `Dist::Zilla`.
 
 Another concern is that generated files should not enter a VCS like
-[Git](http://git-scm.com).  Not only are generated files redundant
+[Git](http://git-scm.com/).  Not only are generated files redundant
 and can be recreated whenever needed, but they can easily become
 inconsistent and therefore be confusing and lead to subtle bugs.
 
-The purpose of `dh-dist-zilla` is to enable `debhelper` to build a
+The purpose of `dh-dist-zilla` is to enable debhelper to build a
 Debian package for Perl code directly from `dist.ini` and the
 original source code.  In particular, it allows to build a Debian
 package directly from a VCS checkout.
@@ -83,6 +83,8 @@ package directly from a VCS checkout.
 Further Reading
 ---------------
 
-* [Module::Build](http://www.perl.com/pub/2003/02/module1.html) as a replacement for `ExtUtils::MakeMaker` by Dave Rolsky
+* [Module::Build](http://www.perl.com/pub/2003/02/module1.html) as a
+  replacement for `ExtUtils::MakeMaker` by Dave Rolsky
 
-* [More Code, Less Cruft: Managing Distributions with Dist::Zilla](http://www.perl.com/pub/2010/03/more-code-less-cruft-managing-distributions-with-distzilla.html) by Ricardo Signes
+* [More Code, Less Cruft: Managing Distributions with Dist::Zilla](http://www.perl.com/pub/2010/03/more-code-less-cruft-managing-distributions-with-distzilla.html)
+  by Ricardo Signes
