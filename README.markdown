@@ -32,7 +32,7 @@ META.yml, and README need to be added.
 There is some tedium in writing all these files and there is no
 surprise to find code generators for them.
 [`Module::Starter`](http://search.cpan.org/dist/Module-Starter/lib/Module/Starter.pm)
-is such a code generator the is very commonly used.  It helps a lot
+is such a code generator that is very commonly used.  It helps a lot
 getting started.  However, maintenance still needs to make sure that
 information like version numbers or documentation is kept consistent.
 
@@ -76,6 +76,6 @@ and can be recreated whenever needed, but they can easily become
 inconsistent and therefore be confusing and lead to subtle bugs.
 
 The purpose of `dh-dist-zilla` is to enable `debhelper` to build a
-Debian package for Perl code directly from `dist.init` and the
+Debian package for Perl code directly from `dist.ini` and the
 original source code.  In particular, it allows to build a Debian
 package directly from a VCS checkout.
