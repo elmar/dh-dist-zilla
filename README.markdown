@@ -79,3 +79,10 @@ The purpose of `dh-dist-zilla` is to enable `debhelper` to build a
 Debian package for Perl code directly from `dist.ini` and the
 original source code.  In particular, it allows to build a Debian
 package directly from a VCS checkout.
+
+Further Reading
+---------------
+
+* [Module::Build](http://www.perl.com/pub/2003/02/module1.html) as a replacement for `ExtUtils::MakeMaker` by Dave Rolsky
+
+* [More Code, Less Cruft: Managing Distributions with Dist::Zilla](http://www.perl.com/pub/2010/03/more-code-less-cruft-managing-distributions-with-distzilla.html) by Ricardo Signes
