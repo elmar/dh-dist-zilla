@@ -1,3 +1,4 @@
-dist_zilla.pm       /usr/share/perl5/Debian/Debhelper/Sequence
+#Sequence/dist_zilla.pm	/usr/share/perl5/Debian/Debhelper/Sequence
+Buildsystem/dist_zilla.pm	/usr/share/perl5/Debian/Debhelper/Buildsystem
 dh_dzil_clean       /usr/bin
 dh_dzil_build       /usr/bin
