@@ -65,7 +65,7 @@ defined options.
 
 If the package is built and maintained using `Dist::Zilla` it would
 be advantageous to build from the original source files like
-`dist.ini` rathern base it on derived files like `Build.PL`.  The
+`dist.ini` rather than base it on derived files like `Build.PL`.  The
 most prominent benefits are avoiding inconsistencies and
 incorporating all improvements and bug fixes that went into
 `Dist::Zilla`.
