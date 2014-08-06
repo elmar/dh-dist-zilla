@@ -87,4 +87,8 @@ Further Reading
   replacement for `ExtUtils::MakeMaker` by Dave Rolsky
 
 * [More Code, Less Cruft: Managing Distributions with Dist::Zilla](http://www.perl.com/pub/2010/03/more-code-less-cruft-managing-distributions-with-distzilla.html)
-  by Ricardo Signes
+  by Ricardo Signes (linear, but partially outdated)
+
+* [The official Dist::Zilla Tutorials](http://dzil.org/tutorial/start.html)
+  by Ricardo Signes and others (non-linear, seems to based on the
+  above, more extensive and more uptodate than the above)
