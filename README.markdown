@@ -91,12 +91,15 @@ package directly from a VCS checkout.
 Further Reading
 ---------------
 
+* [The official Dist::Zilla Tutorials](http://dzil.org/tutorial/start.html)
+  by Ricardo Signes and others
+
+* [The ExtUtils::MakeMaker::FAQ](http://perldoc.perl.org/ExtUtils/MakeMaker/FAQ.html) where among other things they point out that MakeMaker deserves to be replaced by something better but, unfortunately, `Module::Build` is not quite that replacement.
+
 * [Module::Build](http://www.perl.com/pub/2003/02/module1.html) as a
-  replacement for `ExtUtils::MakeMaker` by Dave Rolsky
+  replacement for `ExtUtils::MakeMaker` by Dave Rolsky (note: this is dated, being
+  from 2003, but shows the motivation of replacing MakeMaker)
 
 * [More Code, Less Cruft: Managing Distributions with Dist::Zilla](http://www.perl.com/pub/2010/03/more-code-less-cruft-managing-distributions-with-distzilla.html)
-  by Ricardo Signes (linear, but partially outdated)
-
-* [The official Dist::Zilla Tutorials](http://dzil.org/tutorial/start.html)
-  by Ricardo Signes and others (non-linear, seem to be based on the
-  above, more extensive and more uptodate than the above)
+  by Ricardo Signes (from 2010, outdated in some details but still nicely showing
+  the goals of the tool)
