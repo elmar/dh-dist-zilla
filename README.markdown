@@ -55,6 +55,12 @@ advantage of if the generated files are never touched and only
 This makes development more consistent and eliminates whole classes
 of bugs.
 
+With `dzil` you also avoid having to commit to either
+`ExtUtils::MakeMaker` or `Module::Build`.  You can switch back and
+forth by replacing a `Dist::Zilla` plugin specification.  If another
+successor to MakeMaker should appear and be successful you will most
+certainly be able to use a `Dist::Zilla` plugin to make use of it.
+
 Debian Packaging of Perl Code
 -----------------------------
 
