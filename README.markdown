@@ -23,11 +23,13 @@ The Perl community and [CPAN](http://www.cpan.org/) in particular use
 a few tools to build Perl packages.  The classic approach is to
 write a `Makefile.PL` script using
 [`ExtUtils::MakeMaker`](http://perldoc.perl.org/ExtUtils/MakeMaker.html).
-The more modern variant uses
+The alternative variant uses
 [`Build.PL`](http://perldoc.perl.org/Module/Build.html)
-written with `Module::Build`.  Both are part of the Perl core.  For
-the distribution on CPAN a few more files like LICENSE, MANIFEST,
-META.yml, and README need to be added.
+written with `Module::Build`.  Both are part of the Perl core, but
+`Module::Build` has been deprecated recently and will be removed from
+the core with the next Perl release.  For the distribution on CPAN a
+few more files like LICENSE, MANIFEST, META.yml, and README need to be
+added.
 
 There is some tedium in writing all these files and there is no
 surprise to find code generators for them.
