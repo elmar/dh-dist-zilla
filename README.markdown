@@ -90,5 +90,5 @@ Further Reading
   by Ricardo Signes (linear, but partially outdated)
 
 * [The official Dist::Zilla Tutorials](http://dzil.org/tutorial/start.html)
-  by Ricardo Signes and others (non-linear, seems to based on the
+  by Ricardo Signes and others (non-linear, seem to be based on the
   above, more extensive and more uptodate than the above)
