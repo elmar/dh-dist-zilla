@@ -19,8 +19,9 @@ Enhances: debhelper,
 Description: debhelper add-on to call dzil build and clean up after the build
  dh-dist-zilla provides a debhelper sequence addon named 'dist_zilla'.
  .
- The intention is to be able to build directly from a Dist::Zilla based package
- without generating the CPAN package manually first.  It is analogous to using
+ The intention is to be able to build Debian Perl packages directly
+ from a Dist::Zilla based Perl distributions without generating the
+ CPAN distribution tar-ball manually first.  It is analogous to using
  autoreconf to generate the configure script.
  .
  The orig.tar.gz file must only contain the dist.ini and source files but not

@@ -1,3 +1,9 @@
+dh-dist-zilla (1+dev) UNRELEASED; urgency=medium
+
+  * Update package description to mention Perl at least once.
+
+ -- Axel Beckert <abe@debian.org>  Thu, 07 Aug 2014 17:39:29 +0200
+
 dh-dist-zilla (1) unstable; urgency=low
 
   * Initial release. (Closes: #757229)
