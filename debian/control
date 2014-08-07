@@ -25,4 +25,4 @@ Description: debhelper add-on to call dzil build and clean up after the build
  autoreconf to generate the configure script.
  .
  The orig.tar.gz file must only contain the dist.ini and source files but not
- the generated files like META.yaml, README, etc.
+ the generated files like META.yml, README, etc.

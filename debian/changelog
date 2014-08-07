@@ -1,6 +1,8 @@
 dh-dist-zilla (1+dev) UNRELEASED; urgency=medium
 
-  * Update package description to mention Perl at least once.
+  * Update package description:
+    + Mention Perl at least once.
+    + Mention META.yml instead of META.yaml as used in CPAN packages.
 
  -- Axel Beckert <abe@debian.org>  Thu, 07 Aug 2014 17:39:29 +0200
 
