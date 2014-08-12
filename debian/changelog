@@ -4,6 +4,8 @@ dh-dist-zilla (1+dev) UNRELEASED; urgency=medium
   * Update package description:
     + Mention Perl at least once.
     + Mention META.yml instead of META.yaml as used in CPAN packages.
+  * Add new helper command dh-dzil-refresh to run "dh-make-perl refresh"
+    inside the build directory.
 
   [ Elmar Heeb ]
   * pass options to dzil command in dh_dzil_*

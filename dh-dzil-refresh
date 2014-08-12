@@ -1,0 +1,59 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+use autodie;
+
+use Getopt::Mixed;
+use Config::INI::Reader;
+
+my $dist_ini  = Config::INI::Reader->read_file('dist.ini');
+my $name      = $dist_ini->{'_'}{name};
+my $version   = $dist_ini->{'_'}{version};
+my $build_dir = "$name-$version";
+
+our ($opt_a, $opt_c, $opt_h, $opt_w);
+Getopt::Mixed::getOptions("w wrap-and-sort>w a wrap-and-sort-always>a c clean-backup-files>c h help>h");
+
+if ($opt_h) {
+    ...;
+}
+
+system(qw(dzil build));
+system(qw(cp -pr debian), $build_dir);
+chdir($build_dir);
+system(qw(dh-make-perl refresh));
+system("cp -pr debian/* ../debian/");
+chdir('..');
+system(qw(dzil clean));
+
+
+if ($opt_a) {
+    system(qw(wrap-and-sort -a));
+} elsif ($opt_w) {
+    system('wrap-and-sort');
+}
+
+if ($opt_c) {
+    system('rm -f debian/*.bak');
+}
+
+=head1 NAME
+
+dh-dzil-refresh - dh-dist-zilla helper script to run "dh-make-perl refresh"
+
+=head1 COMMAND SPELLING
+
+In comparison to L<dh_dzil_build> and L<dh_dzil_clean>, the command
+name is spelled with dash instead of underscores as it's not a
+debhelper plugin and only those should start with "dh_". The only
+exemption is dh_make -- for historical reasons. Note that even
+dh-make-perl is spelled with dashes.
+
+=head1 SEE ALSO
+
+L<debhelper(7)>, L<dh-dist-zilla(7)>
+
+=head1 AUTHOR
+
+Elmar Heeb <elmar@heebs.ch> and Axel Beckert <abe@debian.org>
