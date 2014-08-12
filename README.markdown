@@ -103,3 +103,10 @@ Further Reading
 * [More Code, Less Cruft: Managing Distributions with Dist::Zilla](http://www.perl.com/pub/2010/03/more-code-less-cruft-managing-distributions-with-distzilla.html)
   by Ricardo Signes (from 2010, outdated in some details but still nicely showing
   the goals of the tool)
+
+Version Numbers
+---------------
+
+We try to conform [Semantic Versioning](http://semver.org/) with the
+only exception that we omit trailing zeros, i.e. version 1 is
+equivalent to version 1.0.0.
