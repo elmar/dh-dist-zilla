@@ -107,6 +107,6 @@ Further Reading
 Version Numbers
 ---------------
 
-We try to conform [Semantic Versioning](http://semver.org/) with the
-only exception that we omit trailing zeros, i.e. version 1 is
+We try to conform to [Semantic Versioning](http://semver.org/) with
+the only exception that we omit trailing zeros, i.e. version 1 is
 equivalent to version 1.0.0.
