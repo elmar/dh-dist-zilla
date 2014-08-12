@@ -9,7 +9,7 @@ dh-dist-zilla (1+dev) UNRELEASED; urgency=medium
   * Simplify dpkg-parsechangelog call in debian/rules
     + Add build-dependency on dpkg-dev >= 1.17
   * DRY: Specify to be generated man-pages only once.
-  * Add missing Vcs-* headers.
+  * Add missing Homepage and Vcs-* headers.
   * Mention Semantic Versioning in the README.
 
   [ Elmar Heeb ]
