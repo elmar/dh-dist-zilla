@@ -6,11 +6,15 @@ use warnings;
 use Debian::Debhelper::Dh_Lib;
 init();
 
-doit(qw(dzil clean));
+doit(qw(dzil clean), @ARGV);
 
 =head1 NAME
 
 dh_dzil_clean - debhelper add-on to run "dzil clean"
+
+=head1 OPTIONS
+
+Options before C<--> are used by debhelper.  Options after C<--> are passed on to C<dzil clean>.
 
 =head1 SEE ALSO
 

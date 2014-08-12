@@ -6,11 +6,15 @@ use warnings;
 use Debian::Debhelper::Dh_Lib;
 init();
 
-doit(qw(dzil build));
+doit(qw(dzil build), @ARGV);
 
 =head1 NAME
 
 dh_dzil_build - debhelper add-on to run "dzil build"
+
+=head1 OPTIONS
+
+Options before C<--> are used by debhelper.  Options after C<--> are passed on to C<dzil build>.
 
 =head1 SEE ALSO
 

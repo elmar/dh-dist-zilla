@@ -1,8 +1,12 @@
 dh-dist-zilla (1+dev) UNRELEASED; urgency=medium
 
+  [ Axel Beckert ]
   * Update package description:
     + Mention Perl at least once.
     + Mention META.yml instead of META.yaml as used in CPAN packages.
+
+  [ Elmar Heeb ]
+  * pass options to dzil command in dh_dzil_*
 
  -- Axel Beckert <abe@debian.org>  Thu, 07 Aug 2014 17:39:29 +0200
 
