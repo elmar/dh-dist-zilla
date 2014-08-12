@@ -6,6 +6,8 @@ dh-dist-zilla (1+dev) UNRELEASED; urgency=medium
     + Mention META.yml instead of META.yaml as used in CPAN packages.
   * Add new helper command dh-dzil-refresh to run "dh-make-perl refresh"
     inside the build directory.
+  * Simplify dpkg-parsechangelog call in debian/rules
+    + Add build-dependency on dpkg-dev >= 1.17
 
   [ Elmar Heeb ]
   * pass options to dzil command in dh_dzil_*

@@ -1,5 +1,5 @@
 #!/usr/bin/make -f
-version := $(shell dpkg-parsechangelog | sed -nr 's/^Version: (.*)/\1/p')
+version := $(shell dpkg-parsechangelog -SVersion)
 pod2man := pod2man -r "dh-dist-zilla v$(version)" -c dh-dist-zilla
 
 %:
