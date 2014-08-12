@@ -6,6 +6,8 @@ Uploaders: Axel Beckert <abe@debian.org>
 Build-Depends: debhelper (>= 9),
                dpkg-dev (>= 1.17)
 Standards-Version: 3.9.5
+Vcs-Git: git://github.com/elmar/dh-dist-zilla.git
+Vcs-Browser: https://github.com/elmar/dh-dist-zilla
 
 Package: dh-dist-zilla
 Architecture: all
