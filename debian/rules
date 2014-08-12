@@ -1,12 +1,10 @@
 #!/usr/bin/make -f
 version := $(shell dpkg-parsechangelog -SVersion)
-pod2man := pod2man -r "dh-dist-zilla v$(version)" -c dh-dist-zilla
+pod2man := pod2man -r "dh-dist-zilla v$(version)" -c dh-dist-zilla --section=
 
 %:
 	dh $@
 
 override_dh_auto_build:
-	$(pod2man) --section=7 dh-dist-zilla.pod dh-dist-zilla.7
-	$(pod2man) --section=1 dh_dzil_build dh_dzil_build.1
-	$(pod2man) --section=1 dh_dzil_clean dh_dzil_clean.1
-	$(pod2man) --section=1 dh-dzil-refresh dh-dzil-refresh.1
+	perl -F\\. -lane '-e $$F[0] or $$F[0].=".pod"; system(qq($(pod2man)@F[1,0] $$_))' \
+	    < debian/manpages
