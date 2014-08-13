@@ -1,4 +1,3 @@
 dh-dist-zilla.7
-dh_dzil_build.1
-dh_dzil_clean.1
+dh_dzil_*.1
 dh-dzil-refresh.1
