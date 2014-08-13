@@ -17,6 +17,9 @@ open(my $dmp, '<', $list_of_manpages);
 while (my $line = <$dmp>) {
     chomp($line);
 
+    # Weed out commments and empty lines
+    next if $line =~ /^#|^$/;
+
     # Expect man page section as file suffix
     my ($name, $section) = split(/\./, $line);
 
