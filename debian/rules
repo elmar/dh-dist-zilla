@@ -1,10 +1,7 @@
 #!/usr/bin/make -f
-version := $(shell dpkg-parsechangelog -SVersion)
-pod2man := pod2man -r "dh-dist-zilla v$(version)" -c dh-dist-zilla --section=
 
 %:
 	dh $@
 
 override_dh_auto_build:
-	perl -F\\. -lane '-e $$F[0] or $$F[0].=".pod"; system(qq($(pod2man)@F[1,0] $$_))' \
-	    < debian/manpages
+	debian/generate_manpages.pl
