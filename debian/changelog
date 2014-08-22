@@ -1,4 +1,4 @@
-dh-dist-zilla (1+dev) UNRELEASED; urgency=medium
+dh-dist-zilla (1.1) unstable; urgency=medium
 
   [ Axel Beckert ]
   * Update package description:
@@ -15,7 +15,7 @@ dh-dist-zilla (1+dev) UNRELEASED; urgency=medium
   [ Elmar Heeb ]
   * pass options to dzil command in dh_dzil_*
 
- -- Axel Beckert <abe@debian.org>  Thu, 07 Aug 2014 17:39:29 +0200
+ -- Axel Beckert <abe@debian.org>  Fri, 22 Aug 2014 14:54:21 +0200
 
 dh-dist-zilla (1) unstable; urgency=low
 
