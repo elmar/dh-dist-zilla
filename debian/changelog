@@ -2,6 +2,7 @@ dh-dist-zilla (1.1.1) UNRELEASED; urgency=medium
 
   * Fix missing Recommends on libgetopt-mixed-perl and devscripts for
     dh-dzil-refresh.
+  * Update dh-dzil-refresh's POD, mention options and wrap-and-sort.
 
  -- Axel Beckert <abe@debian.org>  Fri, 22 Aug 2014 17:33:10 +0200
 

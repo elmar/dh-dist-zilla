@@ -40,19 +40,39 @@ if ($opt_c) {
 
 =head1 NAME
 
-dh-dzil-refresh - dh-dist-zilla helper script to run "dh-make-perl refresh"
+dh-dzil-refresh - runs "dh-make-perl refresh" in dzil's build directory
+
+=head1 SYNOPSIS
+
+  dh-dzil-refresh
+  dh-dzil-refresh -w
+  dh-dzil-refresh -a
+
+=head1 OPTIONS
+
+=over 4
+
+=item C<-w>
+
+Run C<wrap-and-sort> after C<dh-make-perl refresh>.
+
+=item C<-a>
+
+Run C<wrap-and-sort -a> after C<dh-make-perl refresh>.
+
+=back
 
 =head1 COMMAND SPELLING
 
 In comparison to L<dh_dzil_build> and L<dh_dzil_clean>, the command
 name is spelled with dash instead of underscores as it's not a
 debhelper plugin and only those should start with "dh_". The only
-exemption is dh_make -- for historical reasons. Note that even
-dh-make-perl is spelled with dashes.
+exemption is C<dh_make> -- for historical reasons. Note that even
+C<dh-make-perl> is spelled with dashes.
 
 =head1 SEE ALSO
 
-L<debhelper(7)>, L<dh-dist-zilla(7)>
+L<debhelper(7)>, L<dh-dist-zilla(7)>, L<dh-make-perl(1)>, L<wrap-and-sort(1)>
 
 =head1 AUTHOR
 
