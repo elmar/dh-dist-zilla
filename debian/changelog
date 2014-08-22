@@ -1,3 +1,9 @@
+dh-dist-zilla (1.1.1) UNRELEASED; urgency=medium
+
+  * Fix missing Recommends on libgetopt-mixed-perl for dh-dzil-refresh.
+
+ -- Axel Beckert <abe@debian.org>  Fri, 22 Aug 2014 17:33:10 +0200
+
 dh-dist-zilla (1.1) unstable; urgency=medium
 
   [ Axel Beckert ]

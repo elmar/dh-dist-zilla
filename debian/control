@@ -18,6 +18,7 @@ Depends: debhelper (>= 7),
          libdist-zilla-perl,
          ${misc:Depends},
          ${perl:Depends}
+Recommends: libgetopt-mixed-perl
 Enhances: debhelper,
           libdist-zilla-perl
 Description: debhelper add-on to call dzil build and clean up after the build
