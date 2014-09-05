@@ -60,6 +60,10 @@ Run C<wrap-and-sort> after C<dh-make-perl refresh>.
 
 Run C<wrap-and-sort -a> after C<dh-make-perl refresh>.
 
+=item C<-c>, C<--clean-backup-files>
+
+Clean up C<*.bak> backup files created by C<dh-make-perl refresh>.
+
 =back
 
 =head1 COMMAND SPELLING
