@@ -52,11 +52,11 @@ dh-dzil-refresh - runs "dh-make-perl refresh" in dzil's build directory
 
 =over 4
 
-=item C<-w>
+=item C<-w>, C<--wrap-and-sort>
 
 Run C<wrap-and-sort> after C<dh-make-perl refresh>.
 
-=item C<-a>
+=item C<-a>, C<--wrap-and-sort-always>
 
 Run C<wrap-and-sort -a> after C<dh-make-perl refresh>.
 
