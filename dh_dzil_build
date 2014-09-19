@@ -6,7 +6,7 @@ use warnings;
 use Debian::Debhelper::Dh_Lib;
 init();
 
-doit(qw(dzil build), @ARGV);
+doit(qw(dzil build --in .build/debian-build), @ARGV);
 
 =head1 NAME
 

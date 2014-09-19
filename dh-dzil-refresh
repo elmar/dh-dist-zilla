@@ -5,12 +5,8 @@ use warnings;
 use autodie;
 
 use Getopt::Mixed;
-use Config::INI::Reader;
 
-my $dist_ini  = Config::INI::Reader->read_file('dist.ini');
-my $name      = $dist_ini->{'_'}{name};
-my $version   = $dist_ini->{'_'}{version};
-my $build_dir = "$name-$version";
+my $build_dir = ".build/debian-build";
 
 our ($opt_a, $opt_c, $opt_h, $opt_w);
 Getopt::Mixed::getOptions("w wrap-and-sort>w a wrap-and-sort-always>a c clean-backup-files>c h help>h");
@@ -19,12 +15,12 @@ if ($opt_h) {
     ...;
 }
 
-system(qw(dzil build));
+system(qw(dzil build --in), $build_dir);
 system(qw(cp -pr debian), $build_dir);
 chdir($build_dir);
 system(qw(dh-make-perl refresh));
-system("cp -pr debian/* ../debian/");
-chdir('..');
+system("cp -pr debian/* ../../debian/");
+chdir('../..');
 system(qw(dzil clean));
 
 
