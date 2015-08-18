@@ -43,10 +43,10 @@ Enter [`Dist::Zilla`](http://dzil.org/).  The basic promise of
 keep all relevant information exactly once in a place where the
 particular piece of information fits best.  Given the appropriate
 plugin `dzil build` will generate all the files needed for CPAN.
-E.g., the author, version, and license type is stored in a file
-`dist.ini` (and only there) and then used to add it in the
-appropriate places.  Likewise `MANIFEST` is updated by each
-invocation of `dzil build`.
+E.g., the author, version, and license type is stored in exactly one place
+(typically in a file called`dist.ini`and only there) and then used to add it in
+the appropriate places.  Likewise `MANIFEST` and other boilerplate files are
+created or updated by each invocation of `dzil build`.
 
 Technically, `dzil` can be used like `module-starter` or any other
 code generator.  On the other hand its full potential is only taken
