@@ -59,7 +59,9 @@ With `dzil` you also avoid having to commit to either
 `ExtUtils::MakeMaker` or `Module::Build`.  You can switch back and
 forth by replacing a `Dist::Zilla` plugin specification.  If another
 successor to MakeMaker should appear and be successful you will most
-certainly be able to use a `Dist::Zilla` plugin to make use of it.
+certainly be able to use a `Dist::Zilla` plugin to make use of it.  This, of
+course, only applies if you are just using features supported by both or all
+build mechanisms you want to switch between them.
 
 Debian Packaging of Perl Code
 -----------------------------
