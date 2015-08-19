@@ -8,18 +8,19 @@ init();
 
 my $source_pkg = sourcepackage();
 my $is_native  = isnative($source_pkg);
+my $verbose    = $dh{VERBOSE};
 my $upstream_version = $dh{VERSION};
 # Strip Debian revision
 $upstream_version =~ s/-[^-]+$//;
 
 my $orig_tar = "../${source_pkg}_${upstream_version}.orig.tar";
 doit('tar',
-     ($dh{VERBOSE} ? 'cvf' : 'cf'),
+     ($verbose ? 'cvf' : 'cf'),
      $orig_tar,
      ($is_native ? '' : '--exclude=debian'),
      qw(--exclude=.git --exclude=.svn --exclude=.hg .),
      @ARGV);
-doit('xz', '-7f'.($dh{VERBOSE} ? 'v' : ''), $orig_tar);
+doit('xz', '-7f'.($verbose ? 'v' : ''), $orig_tar);
 
 =head1 NAME
 
