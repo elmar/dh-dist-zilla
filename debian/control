@@ -19,7 +19,8 @@ Depends: debhelper (>= 7),
          ${perl:Depends}
 Recommends: devscripts,
             libgetopt-mixed-perl
-Suggests: xz-utils
+Suggests: pristine-tar,
+          xz-utils
 Enhances: debhelper,
           libdist-zilla-perl
 Description: debhelper add-on to call dzil build and clean up after the build
