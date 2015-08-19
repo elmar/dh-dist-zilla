@@ -14,4 +14,9 @@ add_command_options("dh_auto_test",      '-D', $build_dir);
 
 insert_before("dh_auto_clean", "dh_dzil_clean");
 
+# Create an origtar / get-orig-source target
+foreach my $target (qw(origtar get-orig-source)) {
+    add_command('dh_dist_zilla_origtar', $target);
+}
+
 1;

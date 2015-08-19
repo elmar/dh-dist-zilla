@@ -17,6 +17,27 @@ before C<dh_clean> and will add the option C<-D I<build-directory>> to
 C<dh_auto_configure>, C<dh_auto_build>, C<dh_auto_install>, and
 C<dh_auto_test>.
 
+=head2 How to generate the .orig.tar.xz "upstream" tar-ball
+
+A `debian/rules` file as mentioned above also provides a
+`get-orig-source` target to generate a source tar ball which contains
+the minimal necessary contents (compared to the contents of tar-ball
+for CPAN which would require some additional, generated meta data
+files):
+
+    make -f debian/rules get-orig-source
+
+Or if your `debian/rules` file is executable, you can also just call
+it like this:
+
+    debian/rules get-orig-source
+
+If you want to type even less, there's also a `origtar` alias (named
+after the `origtargz` script from the `devscripts` package) for this
+target:
+
+    debian/rules origtar
+
 =head1 SEE ALSO
 
 L<debhelper(7)>, L<dh(1)>, L<dzil(1)>, L<dh_dzil_build(1)>, L<dh_dzil_clean(1)>
