@@ -40,7 +40,8 @@ target:
 
 =head1 SEE ALSO
 
-L<debhelper(7)>, L<dh(1)>, L<dzil(1)>, L<dh_dzil_build(1)>, L<dh_dzil_clean(1)>, L<dh_dist_zilla_origtar(1)>
+L<debhelper(7)>, L<dh(1)>, L<dzil(1)>, L<dh_dzil_build(1)>,
+L<dh_dzil_clean(1)>, L<dh_dist_zilla_origtar(1)>
 
 =head1 AUTHOR
 
