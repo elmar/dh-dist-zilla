@@ -7,5 +7,5 @@ override_dh_auto_build:
 	debian/generate_manpages.pl
 
 override_dh_auto_test:
-	fgrep -r '#!/usr/bin/perl' -l . | xargs -n1 perl -c
+	fgrep -r '#!/usr/bin/''perl' -l . | xargs -n1 perl -c
 	perl -c *.pm
