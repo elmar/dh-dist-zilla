@@ -1,0 +1,5 @@
+/*.[1-9]
+/debian/*.debhelper.log
+/debian/*.substvars
+/debian/files
+/debian/dh-dist-zilla/
