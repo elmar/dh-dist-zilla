@@ -24,7 +24,9 @@ Suggests: pristine-tar,
 Enhances: debhelper,
           libdist-zilla-perl
 Description: debhelper add-on to call dzil build and clean up after the build
- dh-dist-zilla provides a debhelper sequence addon named 'dist_zilla'.
+ dh-dist-zilla provides a debhelper sequence addon named 'dist_zilla',
+ i.e. you can use it in your project's debian/rules as "dh $@ --with
+ dist-zilla".
  .
  The intention is to be able to build Debian Perl packages directly
  from a Dist::Zilla based Perl distributions without generating the
