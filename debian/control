@@ -31,5 +31,7 @@ Description: debhelper add-on to call dzil build and clean up after the build
  CPAN distribution tar-ball manually first.  It is analogous to using
  autoreconf to generate the configure script.
  .
- The orig.tar.gz file must only contain the dist.ini and source files but not
- the generated files like META.yml, README, etc.
+ The orig.tar.gz/.xz file must only contain the dist.ini and source
+ files but not the generated files like META.yml, README, etc. If you
+ use dh-dist-zilla, you can use "debian/rules get-orig-source" to
+ generate a conforming upstream tar ball if none is available yet.
