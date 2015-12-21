@@ -3,7 +3,10 @@ use warnings;
 use strict;
 use Debian::Debhelper::Dh_Lib;
 
-my $build_dir = ".build/debian-build";
+my $build_root = ".build";
+my $build_dir = "$build_root/debian-build";
+# Override dzil's looking for $HOME
+$ENV{DZIL_GLOBAL_CONFIG_ROOT} = $build_root;
 
 insert_before("dh_auto_configure", "dh_dzil_build");
 
