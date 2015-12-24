@@ -1,6 +1,10 @@
 dh-dist-zilla (1.3.2) UNRELEASED; urgency=medium
 
   * Bump copyright years in debian/copyright.
+  * Add a LICENSE file in the root directory with the full text of the
+    GPLv3. (debian/copyright only refers to /usr/share/common-licenses/
+    which might not suffice for people just downloading or viewing the
+    source code online.)
 
  -- Axel Beckert <abe@debian.org>  Thu, 24 Dec 2015 14:59:26 +0100
 
