@@ -7,6 +7,7 @@ dh-dist-zilla (1.3.2) UNRELEASED; urgency=medium
     source code online.)
   * Switch Vcs-Git from git:// to https://, fixes lintian warning
     vcs-field-uses-insecure-uri.
+  * Add new debian/debhelper-build-stamp to .gitignore.
 
  -- Axel Beckert <abe@debian.org>  Thu, 24 Dec 2015 14:59:26 +0100
 

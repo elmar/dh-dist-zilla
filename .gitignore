@@ -3,3 +3,4 @@
 /debian/*.substvars
 /debian/files
 /debian/dh-dist-zilla/
+/debian/debhelper-build-stamp
