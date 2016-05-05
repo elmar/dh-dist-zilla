@@ -33,7 +33,7 @@ added.
 
 There is some tedium in writing all these files and there is no
 surprise to find code generators for them.
-[`Module::Starter`](http://search.cpan.org/dist/Module-Starter/lib/Module/Starter.pm)
+[`Module::Starter`](https://metacpan.org/pod/Module::Starter)
 is such a code generator that is very commonly used.  It helps a lot
 getting started.  However, maintenance still needs to make sure that
 information like version numbers or documentation is kept consistent.
