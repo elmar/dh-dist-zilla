@@ -2,7 +2,7 @@ Debhelper Plugin to Support Dist::Zilla Packages Natively
 =========================================================
 
 The Debian package dh-dist-zilla provides a
-[debhelper](http://joeyh.name/code/debhelper/) sequence addon named
+[debhelper](https://joeyh.name/code/debhelper/) sequence addon named
 'dist_zilla'.
 
 The intention is to be able to build Debian packages (`.deb` files)
@@ -68,7 +68,7 @@ Debian Packaging of Perl Code
 
 When packaging Perl code Debian relies heavily on CPAN or at least
 on the package contents of a package conforming to the CPAN standard.
-[Debhelper](http://joeyh.name/code/debhelper/)
+[Debhelper](https://joeyh.name/code/debhelper/)
 can rely on either `Makefile.PL` or `Build.PL` to be present and
 conform to the common standard procedures accepting all their well
 defined options.
@@ -81,7 +81,7 @@ incorporating all improvements and bug fixes that went into
 `Dist::Zilla`.
 
 Another concern is that generated files should not enter a VCS like
-[Git](http://git-scm.com/).  Not only are generated files redundant
+[Git](https://git-scm.com/).  Not only are generated files redundant
 and can be recreated whenever needed, but they can easily become
 inconsistent and therefore be confusing and lead to subtle bugs.
 
