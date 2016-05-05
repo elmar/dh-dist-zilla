@@ -98,7 +98,7 @@ Further Reading
 
 * [The ExtUtils::MakeMaker::FAQ](http://perldoc.perl.org/ExtUtils/MakeMaker/FAQ.html) where among other things they point out that MakeMaker deserves to be replaced by something better but, unfortunately, `Module::Build` is not quite that replacement.
 
-* [Module::Build](http://www.perl.com/pub/2003/02/module1.html) as a
+* [Module::Build](http://www.perl.com/pub/2003/02/12/module1.html) as a
   replacement for `ExtUtils::MakeMaker` by Dave Rolsky (note: this is dated, being
   from 2003, but shows the motivation of replacing MakeMaker)
 
