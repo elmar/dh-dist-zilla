@@ -20,6 +20,9 @@ if ($help) {
     ...;
 }
 
+die 'No dist.ini found in current directory. Bailing out'
+    unless -r 'dist.ini';
+
 system(qw(dzil build --in), $build_dir);
 system(qw(cp -pr debian), $build_dir);
 chdir($build_dir);
