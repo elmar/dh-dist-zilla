@@ -1,8 +1,12 @@
 dh-dist-zilla (1.3.3~exp) UNRELEASED; urgency=medium
 
   * Drop usage of deprecated Getopt::Mixed. Use Getopt::Long from the
-    perl-base package instead.
+    perl-base package instead. (GH #2)
     + Remove any package relations to libgetopt-mixed-perl.
+  * dh-dzil-refresh:
+    + Bail out immediately if no dist.ini is found
+    + Use Getopt::Long's auto_help and Pod::Usage for --help. (GH #3)
+    + Improve SYNOPSIS so it's more helpful for --help.
 
  -- Axel Beckert <abe@debian.org>  Sun, 03 Jul 2016 18:55:02 +0200
 
