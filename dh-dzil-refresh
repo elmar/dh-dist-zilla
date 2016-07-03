@@ -8,17 +8,13 @@ use Getopt::Long;
 
 my $build_dir = ".build/debian-build";
 
-my ($wrap_and_sort, $wrap_and_sort_always, $clean_backup_files, $help);
+my ($wrap_and_sort, $wrap_and_sort_always, $clean_backup_files);
+Getopt::Long::Configure(qw(auto_help));
 GetOptions(
     'wrap-and-sort|w'        => \$wrap_and_sort,
     'wrap-and-sort-always|a' => \$wrap_and_sort_always,
     'clean-backup-files'     => \$clean_backup_files,
-    'help|usage'             => \$help,
     ) or die("Couldn't understand command line arguments, use --help to see available options \n");
-
-if ($help) {
-    ...;
-}
 
 die 'No dist.ini found in current directory. Bailing out'
     unless -r 'dist.ini';
