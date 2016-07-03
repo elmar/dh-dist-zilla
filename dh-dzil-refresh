@@ -45,8 +45,9 @@ dh-dzil-refresh - runs "dh-make-perl refresh" in dzil's build directory
 =head1 SYNOPSIS
 
   dh-dzil-refresh
-  dh-dzil-refresh -w
-  dh-dzil-refresh -a
+  dh-dzil-refresh [-w|--wrap-and-sort] [-c|--clean-backup-files]
+  dh-dzil-refresh [-a|--wrap-and-sort-always] [-c|--clean-backup-files]
+  dh-dzil-refresh [-h|--help]
 
 =head1 OPTIONS
 
