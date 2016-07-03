@@ -4,14 +4,19 @@ use strict;
 use warnings;
 use autodie;
 
-use Getopt::Mixed;
+use Getopt::Long;
 
 my $build_dir = ".build/debian-build";
 
-our ($opt_a, $opt_c, $opt_h, $opt_w);
-Getopt::Mixed::getOptions("w wrap-and-sort>w a wrap-and-sort-always>a c clean-backup-files>c h help>h");
+my ($wrap_and_sort, $wrap_and_sort_always, $clean_backup_files, $help);
+GetOptions(
+    'wrap-and-sort|w'        => \$wrap_and_sort,
+    'wrap-and-sort-always|a' => \$wrap_and_sort_always,
+    'clean-backup-files'     => \$clean_backup_files,
+    'help|usage'             => \$help,
+    ) or die("Couldn't understand command line arguments, use --help to see available options \n");
 
-if ($opt_h) {
+if ($help) {
     ...;
 }
 
@@ -24,13 +29,13 @@ chdir('../..');
 system(qw(dzil clean));
 
 
-if ($opt_a) {
+if ($wrap_and_sort_always) {
     system(qw(wrap-and-sort -a));
-} elsif ($opt_w) {
+} elsif ($wrap_and_sort) {
     system('wrap-and-sort');
 }
 
-if ($opt_c) {
+if ($clean_backup_files) {
     system('rm -f debian/*.bak');
 }
 
