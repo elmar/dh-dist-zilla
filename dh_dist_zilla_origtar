@@ -4,15 +4,20 @@ use strict;
 use warnings;
 
 use Debian::Debhelper::Dh_Lib;
-init(options => { 'pristine-tar' => \$dh{PRISTINE_TAR } } );
+init(options => { 'pristine-tar' => \$dh{PRISTINE_TAR},
+                  'no-clean' => \$dh{NO_CLEAN} } );
 
 my $source_pkg = sourcepackage();
 my $is_native  = isnative($source_pkg);
 my $verbose    = $dh{VERBOSE};
 my $pristine_tar = $dh{PRISTINE_TAR};
+my $no_clean   = $dh{NO_CLEAN};
 my $upstream_version = $dh{VERSION};
 # Strip Debian revision
 $upstream_version =~ s/-[^-]+$//;
+
+# First clean artifacts from previous, potentially manual builds
+doit(qw(dzil clean)) unless $no_clean;
 
 my $orig_tar = "../${source_pkg}_${upstream_version}.orig.tar";
 doit('tar',
@@ -36,10 +41,14 @@ dh_dist_zilla_origtar is the backend for the dh-dist-zilla's C<dh
 get-orig-source> target to generate minimal upstream tar-balls
 suitable for use with dh-dist-zilla.
 
+It runs C<dzil clean> by default before creating the tar ball.
+
 =head1 OPTIONS
 
 C<--pristine-tar>: Also commit generated upstream tar ball to
 pristine-tar branch using pristine-tar.
+
+C<--no-clean>: Don't run C<dzil clean> before creating the tar ball.
 
 Options before C<--> are used by debhelper.  Options after C<--> are passed on to C<tar>.
 
