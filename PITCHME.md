@@ -16,19 +16,19 @@ Some Questions…
 
 #HSLIDE
 
-What is Dist::Zilla?
---------------------
+### What is Dist::Zilla?
 
-Dist::Zilla is "Don't Repeat Yourself" (DRY) for Perl module authors.
+It's "Don't Repeat Yourself" for Perl module authors.
 
-* Perl module distributions on CPAN require a bunch of meta data files
-  which describe what's in a distribution and its relations,
-  e.g. `META.yml`, `META,json`, `Makefile.PL` or `Build.PL`. (And
-  debhelper relies on those files, too.)
+Perl modules on CPAN require a bunch of meta data files which describe
+its contents and relations, e.g. `META.yml`, `META,json`,
+`Makefile.PL` or `Build.PL`. (debhelper relies on them, too.)
 
-* In all Perl modules you develop, you always want the same author and
-  release tests: Checks for proper style, common errors, POD syntax
-  and coverage, etc. (Think Lintian!)
+In all Perl modules you develop, you always want the same author and
+release tests: Checks for proper style, common errors, POD syntax and
+coverage, etc. (Think Lintian!)
+
+#HSLIDE
 
 Dist::Zilla generates all these files by gathering information from
 your Perl module code plus a single minimal configuration file called
@@ -49,18 +49,18 @@ Dist::Zilla's command is `dzil` and it knows subcommands like `git`:
 
 #HSLIDE
 
-Maintaining Debian Packages of Your Own Dist::Zilla based Perl Modules
-----------------------------------------------------------------------
+#### Packaging Dist::Zilla based Perl Modules
 
-### Typical VCS-Workflow for Building .deb Packages from Your Own Perl Module
+Typical workflow for building a Perl module .deb:
 
-
-1. Build CPAN tar-ball from `master` branch with `dzil build`
-2. Switch to the `upstream` branch
-3. Import the contents of the tar-ball destined for CPAN into VCS
-4. Merge the `upstream` branch into the `debian` branch
+1. Build CPAN tar-ball from `master` branch with `dzil build`.
+2. Switch to the `upstream` branch.
+3. Import the CPAN tar-ball's content into Git.
+4. Merge `upstream` branch into `debian` branch.
 5. Update packaging (`debian/changelog`, etc.)
 6. Build `.deb` package
+
+#HSLIDE
 
 ### What we want
 
@@ -70,10 +70,7 @@ Maintaining Debian Packages of Your Own Dist::Zilla based Perl Modules
 
 #HSLIDE
 
-dh-dist-zilla
--------------
-
-### Obstacles
+### dh-dist-zilla's Challenges
 
 * `dh-make-perl` (for bootstrapping the Debian packaging) needs CPAN
   meta data.
@@ -85,27 +82,23 @@ dh-dist-zilla
 * debhelper (`dh`) only knows about `Build.PL` and `Makefile.PL`, not
   about `dist.ini`
 
+#HSLIDE
+
 ### Debhelper Sequence Modification
 
-* Generate build directory before debhelper looks for the existing of
-  `Build.PL` or `Makefile.PL`.
+Generate build directory before debhelper looks for the existing of
+`Build.PL` or `Makefile.PL`: Call `dzil build` before
+`dh_auto_configure` and ignore generated tar-ball.
 
-  * Call `dzil build` before `dh_auto_configure`
-  * Ignore generated tar ball
+Build package inside the generated build directory: Pass build
+directory option `-D` to `dh_auto_{configure,build,test,install}`.
 
-* Build package inside the generated build directory
-
-  * Pass build directory option `-D` to `dh_auto_configure`,
-    `dh_auto_build`, `dh_auto_test` and `dh_auto_install`.
-
-* Easy cleanup: Just delete the build directory.
-
-  * Call `dzil clean` before `dh_auto_clean`.
+Easy cleanup: Just delete the build directory by calling `dzil clean`
+before `dh_auto_clean`.
 
 #HSLIDE
 
-How do I use dh-dist-zilla in my Debian package?
-------------------------------------------------
+### How do I use dh-dist-zilla in my Debian package?
 
 It's as simple as this `debian/rules` file:
 
@@ -114,6 +107,8 @@ It's as simple as this `debian/rules` file:
         dh $@ --with dist-zilla
 
 Additionally, a build-dependency on `dh-dist-zilla` is needed.
+
+#HSLIDE
 
 ### Untypical Workflow
 
@@ -146,16 +141,6 @@ Future / Roadmap
 
 #HSLIDE
 
-Links
------
-
-### Slides
-
-* http://noone.org/talks/pkg-perl/
-* Contact:
-  * Axel Beckert <abe@debian.org>
-  * Elmar Heeb <elmar@heebs.ch>
-
 ### Tools
 
 * dh-dist-zilla: https://github.com/elmar/dh-dist-zilla
@@ -164,3 +149,12 @@ Links
 * debhelper: https://anonscm.debian.org/cgit/debhelper/debhelper.git
 * Dist::Zilla: http://dzil.org/
 * dh-make-perl: https://metacpan.org/release/DhMakePerl
+
+#HSLIDES
+
+### Slides
+
+* https://gitpitch.com/xtaran/dh-dist-zilla/
+* Contact:
+  * Axel Beckert <abe@debian.org>
+  * Elmar Heeb <elmar@heebs.ch>
