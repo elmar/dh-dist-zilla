@@ -152,7 +152,7 @@ directory.
 * Dist::Zilla: http://dzil.org/
 * dh-make-perl: https://metacpan.org/release/DhMakePerl
 
-#HSLIDES
+#HSLIDE
 
 ### Slides
 
