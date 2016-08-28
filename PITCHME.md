@@ -156,7 +156,7 @@ Additional Helpers
 
 ### Slides
 
-https://gitpitch.com/xtaran/dh-dist-zilla/
+https://gitpitch.com/elmar/dh-dist-zilla
 
 ### Contact
 
