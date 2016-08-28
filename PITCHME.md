@@ -133,11 +133,13 @@ Example Module/Package
 
 #HSLIDE
 
-Future / Roadmap
+Additional Helpers
 ----------------
 
-* `debian/rules` target to create appropriate `.orig.tar.xz` tar balls
-* `dzil` subcommand to call `dh-make-perl` in a build directory.
+Call `dh get-orig-source` to create an appropriate `.orig.tar.xz` tar-ball.
+
+Call `dh-dzil-refresh` to call `dh-make-perl refresh` inside a build
+directory.
 
 #HSLIDE
 
