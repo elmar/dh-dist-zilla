@@ -18,15 +18,15 @@ Some Questions…
 
 ### What is Dist::Zilla?
 
-It's "Don't Repeat Yourself" for Perl module authors.
+* It's "Don't Repeat Yourself" for Perl module authors.
 
-Perl modules on CPAN require a bunch of meta data files which describe
-its contents and relations, e.g. `META.yml`, `META,json`,
-`Makefile.PL` or `Build.PL`. (debhelper relies on them, too.)
+* Perl modules on CPAN require a bunch of meta data files which
+  describe its contents and relations, e.g. `META.yml`, `META,json`,
+  `Makefile.PL` or `Build.PL`. (debhelper relies on them, too.)
 
-In all Perl modules you develop, you always want the same author and
-release tests: Checks for proper style, common errors, POD syntax and
-coverage, etc. (Think Lintian!)
+* In all Perl modules you develop, you always want the same author and
+  release tests: Checks for proper style, common errors, POD syntax
+  and coverage, etc. (Think Lintian!)
 
 #HSLIDE
 
@@ -86,15 +86,15 @@ Typical workflow for building a Perl module .deb:
 
 ### Debhelper Sequence Modification
 
-Generate build directory before debhelper looks for the existing of
-`Build.PL` or `Makefile.PL`: Call `dzil build` before
-`dh_auto_configure` and ignore generated tar-ball.
+* Generate build directory before debhelper looks for the existing of
+  `Build.PL` or `Makefile.PL`: Call `dzil build` before
+  `dh_auto_configure` and ignore generated tar-ball.
 
-Build package inside the generated build directory: Pass build
-directory option `-D` to `dh_auto_{configure,build,test,install}`.
+* Build package inside the generated build directory: Pass build
+  directory option `-D` to `dh_auto_{configure,build,test,install}`.
 
-Easy cleanup: Just delete the build directory by calling `dzil clean`
-before `dh_auto_clean`.
+* Easy cleanup: Just delete the build directory by calling `dzil
+  clean` before `dh_auto_clean`.
 
 #HSLIDE
 
@@ -136,10 +136,10 @@ Example Module/Package
 Additional Helpers
 ----------------
 
-Call `dh get-orig-source` to create an appropriate `.orig.tar.xz` tar-ball.
+* Call `dh get-orig-source` to create an appropriate `.orig.tar.xz` tar-ball.
 
-Call `dh-dzil-refresh` to call `dh-make-perl refresh` inside a build
-directory.
+* Call `dh-dzil-refresh` to call `dh-make-perl refresh` inside a build
+  directory.
 
 #HSLIDE
 
@@ -156,7 +156,9 @@ directory.
 
 ### Slides
 
-* https://gitpitch.com/xtaran/dh-dist-zilla/
-* Contact:
-  * Axel Beckert <abe@debian.org>
-  * Elmar Heeb <elmar@heebs.ch>
+https://gitpitch.com/xtaran/dh-dist-zilla/
+
+### Contact
+
+* Axel Beckert <abe@debian.org>
+* Elmar Heeb <elmar@heebs.ch>
