@@ -107,6 +107,13 @@ Further Reading
   by Ricardo Signes (from 2010, outdated in some details but still nicely showing
   the goals of the tool)
 
+See Also
+--------
+
+* `Dist::Zilla::App::Command::authordebs`
+  [on GitHub](https://github.com/dod38fr/dist-zilla-app-command-authordebs)
+  [on CPAN](https://metacpan.org/pod/Dist::Zilla::App::Command::authordebs)
+
 Version Numbers
 ---------------
 

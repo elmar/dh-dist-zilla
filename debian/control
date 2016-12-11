@@ -18,7 +18,8 @@ Depends: debhelper (>= 7),
          ${misc:Depends},
          ${perl:Depends}
 Recommends: devscripts
-Suggests: pristine-tar,
+Suggests: libdist-zilla-app-command-authordebs-perl,
+          pristine-tar,
           xz-utils
 Enhances: debhelper,
           libdist-zilla-perl
