@@ -9,6 +9,7 @@ Standards-Version: 3.9.8
 Vcs-Git: https://github.com/elmar/dh-dist-zilla.git
 Vcs-Browser: https://github.com/elmar/dh-dist-zilla
 Homepage: https://github.com/elmar/dh-dist-zilla
+Rules-Requires-Root: no
 
 Package: dh-dist-zilla
 Architecture: all
