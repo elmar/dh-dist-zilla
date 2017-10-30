@@ -7,6 +7,7 @@ dh-dist-zilla (1.3.5) UNRELEASED; urgency=medium
     + Update versioned debhelper build-dependency accordingly.
   * Make package perlcritic-severity-4-clean. Also fulfil some
     requirements for perlcritic severity level 3.
+  * Add debian/.debhelper/ to .gitignore.
 
  -- Axel Beckert <abe@debian.org>  Sun, 11 Dec 2016 13:04:53 +0100
 
