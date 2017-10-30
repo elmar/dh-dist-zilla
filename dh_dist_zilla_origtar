@@ -14,7 +14,7 @@ my $pristine_tar = $dh{PRISTINE_TAR};
 my $no_clean   = $dh{NO_CLEAN};
 my $upstream_version = $dh{VERSION};
 # Strip Debian revision
-$upstream_version =~ s/-[^-]+$//;
+$upstream_version =~ s/-[^-]+$//x;
 
 # First clean artifacts from previous, potentially manual builds
 doit(qw(dzil clean)) unless $no_clean;

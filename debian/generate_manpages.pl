@@ -24,10 +24,10 @@ sub parse_line {
     chomp($line);
 
     # Weed out commments and empty lines
-    next if $line =~ /^#|^$/;
+    next if $line =~ / ^\# | ^$ /x;
 
     # Expect man page section as file suffix
-    my ($name, $section) = split(/\./, $line);
+    my ($name, $section) = split(/ \. /x, $line);
 
     # Expand potential wildcards and check for existence
     my @names = get_names($name);
@@ -44,7 +44,7 @@ sub parse_line {
     foreach my $name (@names) {
         # Remove .pod suffix from final name again
         my $man_page_name = $name;
-        $man_page_name =~ s/\.pod$//;
+        $man_page_name =~ s/ \.pod$ //x;
 
         # Finally call pod2man
         system(@pod2man, "--section=$section",
