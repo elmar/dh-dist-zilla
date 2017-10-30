@@ -15,6 +15,12 @@ my @pod2man = (qw(pod2man -c dh-dist-zilla -r), "dh-dist-zilla v$version");
 
 open(my $dmp, '<', $list_of_manpages);
 while (my $line = <$dmp>) {
+    parse_line($line);
+}
+close($dmp);
+
+sub parse_line {
+    my $line = shift;
     chomp($line);
 
     # Weed out commments and empty lines
@@ -44,9 +50,11 @@ while (my $line = <$dmp>) {
         system(@pod2man, "--section=$section",
                $name, "$man_page_name.$section");
     }
+
+    return;
 }
-close($dmp);
 
 sub get_names {
-    return grep { -e } map { glob } @_;
+    my @globs = @_;
+    return grep { -e } map { glob } @globs;
 }

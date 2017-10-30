@@ -5,6 +5,7 @@ dh-dist-zilla (1.3.5) UNRELEASED; urgency=medium
   * Declare compliance with Debian Policy 4.1.1.
   * Bump debhelper compatibility level to 10.
     + Update versioned debhelper build-dependency accordingly.
+  * Make package perlcritic-severity-4-clean.
 
  -- Axel Beckert <abe@debian.org>  Sun, 11 Dec 2016 13:04:53 +0100
 
