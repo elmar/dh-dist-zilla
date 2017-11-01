@@ -120,3 +120,8 @@ Version Numbers
 We try to conform to [Semantic Versioning](http://semver.org/) with
 the only exception that we omit trailing zeros, i.e. version 1 is
 equivalent to version 1.0.0.
+
+Which Distribution Ships Which Version?
+---------------------------------------
+
+[![Packaging status](https://repology.org/badge/vertical-allrepos/dh-dist-zilla.svg)](https://repology.org/metapackage/dh-dist-zilla)
