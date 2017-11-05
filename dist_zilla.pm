@@ -6,7 +6,7 @@ use Debian::Debhelper::Dh_Lib;
 my $build_root = ".build";
 my $build_dir = "$build_root/debian-build";
 # Override dzil's looking for $HOME
-local $ENV{DZIL_GLOBAL_CONFIG_ROOT} = $build_root;
+$ENV{DZIL_GLOBAL_CONFIG_ROOT} = $build_root;
 
 insert_before("dh_auto_configure", "dh_dzil_build");
 

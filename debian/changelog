@@ -1,3 +1,12 @@
+dh-dist-zilla (1.3.6) UNRELEASED; urgency=medium
+
+  * Fix clean target (and possibly other targets) under non-existing $HOME
+    by changing "local $ENV{DZIL_GLOBAL_CONFIG_ROOT}" back to just
+    "$ENV{DZIL_GLOBAL_CONFIG_ROOT}". Regression introduced in release
+    1.3.5. (Closes: #880837)
+
+ -- Axel Beckert <abe@debian.org>  Sun, 05 Nov 2017 16:33:30 +0100
+
 dh-dist-zilla (1.3.5) unstable; urgency=medium
 
   * Suggest libdist-zilla-app-command-authordebs-perl.
