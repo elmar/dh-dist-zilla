@@ -1,4 +1,4 @@
-dh-dist-zilla (1.3.6) UNRELEASED; urgency=medium
+dh-dist-zilla (1.3.6) unstable; urgency=medium
 
   * Fix clean target (and possibly other targets) under non-existing $HOME
     by changing "local $ENV{DZIL_GLOBAL_CONFIG_ROOT}" back to just
@@ -8,7 +8,7 @@ dh-dist-zilla (1.3.6) UNRELEASED; urgency=medium
     as well as the only level 3 rule which is left. (Carping doesn't make
     much sense in commandline applications.)
 
- -- Axel Beckert <abe@debian.org>  Sun, 05 Nov 2017 16:33:30 +0100
+ -- Axel Beckert <abe@debian.org>  Sun, 05 Nov 2017 16:59:00 +0100
 
 dh-dist-zilla (1.3.5) unstable; urgency=medium
 
