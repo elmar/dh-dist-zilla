@@ -3,6 +3,8 @@ dh-dist-zilla (1.3.7) UNRELEASED; urgency=medium
   * Add dependency on debhelper (<< 10.10.6~) | debhelper (>= 11.1.3~) to
     exclude debhelper versions affected by #887727.
   * Declare compliance with Debian Policy 4.1.3. No changes needed.
+  * Bump debhelper compatibility level to 11.
+    + Update versioned debhelper build-dependency accordingly.
 
  -- Axel Beckert <abe@debian.org>  Sat, 20 Jan 2018 16:16:29 +0100
 
