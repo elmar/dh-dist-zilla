@@ -4,18 +4,24 @@ dh-dist-zilla - debhelper add-on to run dzil (Dist::Zilla) during build
 
 =head1 DESCRIPTION
 
-The dh-dist-zilla package provides a sequence addon for debhelper 7 which
-can be used in the following way:
+The dh-dist-zilla package provides a sequence addon for debhelper 7
+and above which can be used in the following two ways:
+
+In C<debian/rules> since debhelper 7:
 
     #!/usr/bin/make -f
     export DH_VERBOSE=1
     %:
         dh $@ --with dist-zilla
 
-This will call C<dzil build> prior to C<dh_auto_configure>, C<dzil clean>
-before C<dh_clean> and will add the option C<-D I<build-directory>> to
-C<dh_auto_configure>, C<dh_auto_build>, C<dh_auto_install>, and
-C<dh_auto_test>.
+Since debhelper 11.4 alternatively also just in C<debian/control>:
+
+    Build-Depends: dh-sequence-dist-zilla
+
+Both variants will call C<dzil build> prior to C<dh_auto_configure>,
+C<dzil clean> before C<dh_clean> and will add the option C<-D
+I<build-directory>> to C<dh_auto_configure>, C<dh_auto_build>,
+C<dh_auto_install>, and C<dh_auto_test>.
 
 =head2 How to generate the .orig.tar.xz "upstream" tar-ball
 

@@ -12,6 +12,7 @@ Homepage: https://github.com/elmar/dh-dist-zilla
 Rules-Requires-Root: no
 
 Package: dh-dist-zilla
+Provides: dh-sequence-dist-zilla
 Architecture: all
 Multi-Arch: foreign
 Depends: debhelper (>= 7),
