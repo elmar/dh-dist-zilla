@@ -1,0 +1,2 @@
+version=4
+https://metacpan.org/release/Example-Dz   .*/Example-Dz-v?(\d[\d.-]+)\.(?:tar(?:\.gz|\.bz2)?|tgz|zip)$

@@ -1,0 +1,18 @@
+Source: libexample-dz-perl
+Section: perl
+Priority: optional
+Maintainer: Mr. Example <example@example.org>
+Build-Depends: debhelper-compat (= 12),
+               dh-sequence-dist-zilla
+Build-Depends-Indep: perl
+Standards-Version: 4.5.0
+Homepage: https://metacpan.org/release/Example-DZ
+Rules-Requires-Root: no
+
+Package: libexample-dz-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends}
+Description: Dummy test package for dh-dist-zilla
+ Example::DZ is a package which solely exists (or actually not really)
+ to be the test suite for dh-dist-zilla.

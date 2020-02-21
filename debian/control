@@ -5,7 +5,9 @@ Maintainer: Elmar S. Heeb <elmar@heebs.ch>
 Uploaders: Axel Beckert <abe@debian.org>
 Build-Depends: debhelper-compat (= 12),
                dpkg-dev (>= 1.17),
-               libtest-strict-perl <!nocheck>
+               libdist-zilla-perl <!nocheck>,
+               libtest-strict-perl <!nocheck>,
+               libtest-script-run-perl <!nocheck>
 Standards-Version: 4.5.0
 Vcs-Git: https://github.com/elmar/dh-dist-zilla.git
 Vcs-Browser: https://github.com/elmar/dh-dist-zilla
