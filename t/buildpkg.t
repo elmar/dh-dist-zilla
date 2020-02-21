@@ -36,7 +36,7 @@ ok(-e "../${pkgname}_${pkgver}.orig.tar.xz" && -f _ && -s _,
    "orig.tar.xz has been generated");
 
 # Actual package build
-run_ok('dpkg-buildpackage', \@dbpparm,
+run_ok('/usr/bin/dpkg-buildpackage', \@dbpparm,
        'dpkg-buildpackage runs without error');
 foreach my $line ('dh_dzil_clean',
                   'dh_dzil_build',
@@ -67,7 +67,7 @@ foreach my $artifact (qw(
 }
 
 # Cleanup
-run_ok('dpkg-buildpackage', [@dbpparm, qw(-T clean)],
+run_ok('/usr/bin/dpkg-buildpackage', [@dbpparm, qw(-T clean)],
        'dpkg-buildpackage clean runs without error');
 unlink(glob("../${pkgname}_${pkgver}*"));
 

@@ -12,6 +12,7 @@ dh-dist-zilla (1.4.0) UNRELEASED; urgency=medium
   * Add a test which builds a minimal package with dh-dist-zilla.
     + Add build-dependencies libtest-script-run-perl + libdist-zilla-perl.
     + Move dist_zilla.pm source to lib/Debian/Debhelper/Sequence/.
+  * Add debian/tests/control to enable automatic as-installed testing.
 
  -- Axel Beckert <abe@debian.org>  Fri, 21 Feb 2020 00:54:13 +0100
 
