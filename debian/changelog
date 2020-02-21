@@ -1,4 +1,4 @@
-dh-dist-zilla (1.4.0) UNRELEASED; urgency=medium
+dh-dist-zilla (1.4.0) unstable; urgency=medium
 
   * Support "Build-Depends: dh-sequence-dist-zilla" instead of "dh $@
     --with dist-zilla" by adding according Provides. Document this, too.
