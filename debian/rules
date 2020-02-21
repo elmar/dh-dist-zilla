@@ -9,7 +9,7 @@ override_dh_auto_build:
 override_dh_auto_test:
 # "ifeq" can be removed again once we switch to debhelper-compat=13.
 ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS) $(DEB_BUILD_PROFILES)))
-	prove -v t/*.t
+	prove -v t
 endif
 
 perlcritic:
