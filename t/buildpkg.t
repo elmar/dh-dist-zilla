@@ -69,6 +69,6 @@ foreach my $artifact (qw(
 # Cleanup
 run_ok('dpkg-buildpackage', [@dbpparm, qw(-T clean)],
        'dpkg-buildpackage clean runs without error');
-#unlink(glob("../${pkgname}_${pkgver}*"));
+unlink(glob("../${pkgname}_${pkgver}*"));
 
 done_testing();
