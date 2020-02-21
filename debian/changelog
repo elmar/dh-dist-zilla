@@ -6,6 +6,7 @@ dh-dist-zilla (1.4.0) UNRELEASED; urgency=medium
     + Build-depend on "debhelper-compat (= 12)" to replace debian/compat.
   * Guard override_dh_auto_test against nocheck profile for now. Fixes
     lintian warning override_dh_auto_test-does-not-check-DEB_BUILD_OPTIONS.
+  * Declare compliance with Debian Policy 4.5.0. (No changes needed.)
 
  -- Axel Beckert <abe@debian.org>  Fri, 21 Feb 2020 00:54:13 +0100
 
