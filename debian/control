@@ -13,6 +13,7 @@ Vcs-Git: https://github.com/elmar/dh-dist-zilla.git
 Vcs-Browser: https://github.com/elmar/dh-dist-zilla
 Homepage: https://github.com/elmar/dh-dist-zilla
 Rules-Requires-Root: no
+Testsuite: autopkgtest-pkg-perl
 
 Package: dh-dist-zilla
 Provides: dh-sequence-dist-zilla
