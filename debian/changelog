@@ -2,6 +2,7 @@ dh-dist-zilla (1.4.1) UNRELEASED; urgency=medium
 
   * Use the Debian Perl Team's autopkgtest helpers.
     + Drop debian/tests/control, no more needed.
+    + Minor search-path related fixes for t/buildpkg.t.
   * Skip t/syntax.t for autopkgtest, pkg-perl-autopkgtest does it better.
 
  -- Axel Beckert <abe@debian.org>  Sat, 22 Feb 2020 15:43:46 +0100

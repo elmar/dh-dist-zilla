@@ -11,6 +11,7 @@ my $pkgname = 'libexample-dz-perl';
 my $pkgver  = '1.0';
 my $debrev  = '1';
 my @dbpparm = (qw(-uc -us), $ENV{AUTOPKGTEST_TMP} ? () : qw(-d));
+my $path = $ENV{AUTOPKGTEST_TMP} ? '/usr/bin' : '.';
 
 chdir("t/$pkgname");
 $ENV{HOME} = '.';
@@ -22,11 +23,11 @@ unless ($ENV{AUTOPKGTEST_TMP}) {
 }
 
 # dh_dzil_clean
-run_ok('dh_dzil_clean', [],
+run_ok("$path/dh_dzil_clean", [],
        "dh_dzil_clean runs without error");
 
 # dh_dist_zilla_origtar
-run_ok('dh_dist_zilla_origtar', [],
+run_ok("$path/dh_dist_zilla_origtar", [],
        "dh_dist_zilla_origtar runs without error");
 is(last_script_stdout(), '',
    'dh_dist_zilla_origtar runs without output on STDOUT');
