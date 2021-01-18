@@ -1,4 +1,4 @@
-dh-dist-zilla (1.4.1) UNRELEASED; urgency=medium
+dh-dist-zilla (1.4.1) unstable; urgency=medium
 
   * Use the Debian Perl Team's autopkgtest helpers.
     + Drop debian/tests/control, no more needed.
@@ -7,7 +7,7 @@ dh-dist-zilla (1.4.1) UNRELEASED; urgency=medium
   * Bump debhelper-compat to 13.
   * Declare compliance with Debian Policy 4.5.1. (No changes needed.)
 
- -- Axel Beckert <abe@debian.org>  Sat, 22 Feb 2020 15:43:46 +0100
+ -- Axel Beckert <abe@debian.org>  Mon, 18 Jan 2021 03:19:00 +0100
 
 dh-dist-zilla (1.4.0) unstable; urgency=medium
 
