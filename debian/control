@@ -8,7 +8,7 @@ Build-Depends: debhelper-compat (= 13),
                libdist-zilla-perl <!nocheck>,
                libtest-strict-perl <!nocheck>,
                libtest-script-run-perl <!nocheck>
-Standards-Version: 4.5.0
+Standards-Version: 4.5.1
 Vcs-Git: https://github.com/elmar/dh-dist-zilla.git
 Vcs-Browser: https://github.com/elmar/dh-dist-zilla
 Homepage: https://github.com/elmar/dh-dist-zilla

@@ -5,6 +5,7 @@ dh-dist-zilla (1.4.1) UNRELEASED; urgency=medium
     + Minor search-path related fixes for t/buildpkg.t.
   * Skip t/syntax.t for autopkgtest, pkg-perl-autopkgtest does it better.
   * Bump debhelper-compat to 13.
+  * Declare compliance with Debian Policy 4.5.1. (No changes needed.)
 
  -- Axel Beckert <abe@debian.org>  Sat, 22 Feb 2020 15:43:46 +0100
 
